@@ -3,6 +3,7 @@
   <head>
     <title>Bookers2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/5ef47f0b1d.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,7 +19,7 @@
           <% if user_signed_in? %>
           <div class="collapse navbar-collapse" id="navbarNavDropdown"
             <ul class="navbar-nav ml-auto">
-              <li><%= link_to "Home", user_path %></li>
+              <li><%= link_to "Home", user_path(current_user.id) %></li>
               <li><%= link_to "Users", users_path %></li>
               <li><%= link_to "Books", books_path %></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
