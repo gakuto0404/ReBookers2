@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   post 'books' => 'books#create'
   resources :users, only: [:show, :edit, :index]
   resources :books, only: [:new, :index, :show, :edit]
+  patch 'users/:id' => 'users#update', as: 'update_user'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
