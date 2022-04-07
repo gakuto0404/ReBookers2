@@ -4,14 +4,14 @@
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
       <h2>User info</h2>
       <div class="form-group">
-        <%= form_with model: @user, url: update_user_path(@user.id), method: :patch do |f| %>
+        <%= form_with model: @user, url: update_user_path(current_user.id), method: :patch do |f| %>
         <label for="user_name">Name</label>
         <div class="form-group">
-        <%= f.text_field :name, id: "user_name", class: "form-control name"%><!-- :user[name]に変えたい -->
+        <%= f.text_field :name, id: "user_name", class: "form-control name"%>
         </div>
         <div class="form-group">
         <label for="inputImage">Image</label>
-        <%= f.file_field :profile_image, accept: "image/*", id: "user_profile_image", class: "form-control-file user_image" %><!-- :name[profile_image]に変えたい -->
+        <%= f.file_field :profile_image, accept: "image/*", id: "user_profile_image", class: "form-control-file user_image" %>
         </div>
         <div class="form-group">
         <label for="user_introduction">Introduction</label>
