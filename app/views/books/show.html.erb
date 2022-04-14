@@ -52,7 +52,7 @@
                 <% end %>
               </td>
               <td>
-                <%= link_to "destroy", destroy_book_path(@book), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-sm btn-danger" %>
+                <%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-sm btn-danger" %>
               </td>
             <% end %>
           </tr>

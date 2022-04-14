@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
       <h1>Editing Book</h1>
-      <%= form_with model: @book, url: update_book_path(@book), method: :patch do |f| %>
+      <%= form_with model: @book, url: book_path(@book), method: :patch do |f| %>
       <% if @book.errors.any? %>
         <div id="error_explanation">
           <% if @book.errors.count == 1 %>
